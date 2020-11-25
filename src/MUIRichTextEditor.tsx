@@ -1013,7 +1013,7 @@ const MUIRichTextEditor: RefForwardingComponent<TMUIRichTextEditorRef, IMUIRichT
         }
     }
 
-    const keyBindingFn = (e: React.KeyboardEvent<{}>): string | null => {
+    const keyBindingFn = (e: any): string | null => {
         if (hasCommandModifier(e) && props.keyCommands) {
             const comm = props.keyCommands.find(comm => comm.key === e.keyCode)
             if (comm) {
